@@ -1,0 +1,89 @@
+html, body {
+    margin: 0;
+    height: 100%;
+}
+body {
+    background-size: cover;
+    background: linear-gradient(to bottom, rgba(240, 248, 255, 1), rgb(199, 165, 199));
+}
+
+.wrapper {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex-grow: 1;
+}
+
+.cabecera {
+    font-family: "Play", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    padding: 1.5em;
+    text-align: center;
+    background: fixed;
+    background-color: yellowgreen;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.logo {
+    display: block;
+    margin: 10px auto;
+    max-width: 8%; /* Ajusta este valor para hacer la imagen más pequeña */
+    height: auto; /* Mantén la proporción de la imagen */
+    border-radius: 10px;
+}
+
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: aliceblue;
+    min-width: 80px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 8px;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 8px 10px;
+    text-decoration: none;
+    display: block;
+    font-size: 14px;
+    border-radius: 8px;
+}
+
+.dropdown-content a:hover {background-color: #808a65}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+}
+
+.dropbtn {
+    background-color: lemonchiffon;
+}
+
+.dropdown-container {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.dropdown-container .dropdown {
+    margin: 0 10px;
+}
+
