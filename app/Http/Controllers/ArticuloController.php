@@ -13,8 +13,8 @@ class ArticuloController extends Controller
      */
     public function index()
     {
-        $products = Producto::all();
-        return view('articulos');
+        $productos = Producto::all();
+        return view('articulos',compact('productos'));
     }
 
     /**
