@@ -3,13 +3,16 @@ html, body {
     height: 100%;
 }
 body {
-    background-size: cover;
-    background: linear-gradient(to bottom, rgba(240, 248, 255, 1), rgb(199, 165, 199));
+    background: radial-gradient(rgba(240,248,255,1), rgb(199,165,199));
+    margin: 0;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 .wrapper {
+    flex: 1;
     min-height: 100%;
-    display: flex;
     flex-direction: column;
 }
 
@@ -87,3 +90,38 @@ main {
     margin: 0 10px;
 }
 
+
+.contenido {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Centra los elementos dentro del contenedor */
+    margin-top: 20px;
+}
+
+.imagen_producto {
+    max-width: 100%; /* Ajusta el tamaño máximo al 100% del contenedor */
+   /* height: 100px; /* Ajusta la altura deseada */
+    width: 200px;
+    object-fit: cover; /* Mantiene la proporción de la imagen y la recorta si es necesario */
+    padding-bottom: 3px;
+}
+
+.card {
+    display: flex;
+    width: 50%;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%; /* Hace que todas las tarjetas tengan la misma altura */
+    border: 1px solid #ccc; 
+    border-radius: 8px; 
+    overflow: hidden; /* Evita que el contenido desborde */
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.card :hover {
+    background-color: #3e8e41;
+}
+.card-body {
+    flex-grow: 1; /* Hace que el cuerpo de la tarjeta ocupe el espacio disponible */
+    padding: 15px; /* Añade espaciado interno al cuerpo de la tarjeta */
+}
