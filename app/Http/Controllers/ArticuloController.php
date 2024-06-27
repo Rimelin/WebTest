@@ -11,9 +11,19 @@ class ArticuloController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(Request $request)
     {
-        $productos = Producto::all();
+        $query = Producto::query();
+
+        // Filtrar por categoría
+        if ($request->has('categoria')) {
+            $query->where('Categoria', $request->input('categoria'));
+        }
+
+        // ...otros filtros y ordenaciones...
+
+        $productos = $query->get();
+        
         return view('articulos',compact('productos'));
     }
 

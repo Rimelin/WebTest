@@ -21,7 +21,7 @@ class ProductoSeeder extends Seeder
             'fecha_de_creacion' => '2022-02-14',
             'costo' => 1500.50,
             'numero_disponible' => 10,
-            'foto' => 'images/monitorxiaomic.jpg', // Ruta de la imagen
+            'foto' => 'monitorxiaomic.jpg', // Ruta de la imagen
         ]);
 
         Producto::create([
@@ -31,7 +31,7 @@ class ProductoSeeder extends Seeder
             'fecha_de_creacion' => '2023-02-14',
             'costo' => 4999,
             'numero_disponible' => 5,
-            'foto' => 'images/monitorlgug.jpg',
+            'foto' => 'monitorlgug.jpg',
         ]);
 
         Producto::create([
@@ -41,7 +41,7 @@ class ProductoSeeder extends Seeder
             'fecha_de_creacion' => '2021-02-14',
             'costo' => 900,
             'numero_disponible' => 3,
-            'foto' => 'images/monitorstylos.jpg',
+            'foto' => 'monitorstylos.jpg',
         ]);
 
         Producto::create([
@@ -51,7 +51,7 @@ class ProductoSeeder extends Seeder
             'fecha_de_creacion' => '2021-01-20',
             'costo' => 4000,
             'numero_disponible' => 3,
-            'foto' => 'images/rx6600.jpg',
+            'foto' => 'rx6600.jpg',
         ]);
 
         Producto::create([
@@ -61,7 +61,7 @@ class ProductoSeeder extends Seeder
             'fecha_de_creacion' => '2024-01-15',
             'costo' => 11000,
             'numero_disponible' => 3,
-            'foto' => 'images/rx7900gre.jpg',
+            'foto' => 'rx7900gre.jpg',
         ]);
 
         Producto::create([
@@ -71,7 +71,7 @@ class ProductoSeeder extends Seeder
             'fecha_de_creacion' => '2021-01-01',
             'costo' => 5500,
             'numero_disponible' => 3,
-            'foto' => 'images/rtx3060.jpg',
+            'foto' => 'rtx3060.jpg',
         ]);
 
         Producto::create([
@@ -81,7 +81,7 @@ class ProductoSeeder extends Seeder
             'fecha_de_creacion' => '2024-02-14',
             'costo' => 25000,
             'numero_disponible' => 3,
-            'foto' => 'images/rtx4080.jpg',
+            'foto' => 'rtx4080.jpg',
         ]);
 
         Producto::create([
@@ -91,7 +91,7 @@ class ProductoSeeder extends Seeder
             'fecha_de_creacion' => '2019-02-14',
             'costo' => 400,
             'numero_disponible' => 12,
-            'foto' => 'images/tecredlemon.jpg',
+            'foto' => 'tecredlemon.jpg',
         ]);
 
         Producto::create([
@@ -101,7 +101,7 @@ class ProductoSeeder extends Seeder
             'fecha_de_creacion' => '2022-03-30',
             'costo' => 599,
             'numero_disponible' => 5,
-            'foto' => 'images/tecacteck.jpg',
+            'foto' => 'tecacteck.jpg',
         ]);
 
         Producto::create([
@@ -111,7 +111,7 @@ class ProductoSeeder extends Seeder
             'fecha_de_creacion' => '2022-09-25',
             'costo' => 1699.98,
             'numero_disponible' => 1,
-            'foto' => 'images/audifonoscorsair.jpg',
+            'foto' => 'audifonoscorsair.jpg',
         ]);
 
     }
