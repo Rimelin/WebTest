@@ -8,39 +8,46 @@
     <link href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link href="{{ asset('css/styles.css') }}" rel="stylesheet">
-    <title>Articulos</title>
+    <link rel="icon" type="image/jfif" href="{{ asset('images/logo.jfif') }}">
+    <title>Tiendita OP</title>
 </head>
 <body>
-    <div class ="cabecera">
-        <h1>Mi tiendita OP </h1> <img src="{{ asset('images/logo.jfif') }}" alt="Tienda de Electrónicos" class="logo">
-        <div class="dropdown-container">
-            <div class="dropdown">
-                <button class="dropbtn">Categorías</button>
-                <div class="dropdown-content">
-                    <a href="{{ url('/articulos?categoria=GPU') }}">GPU</a>
-                    <a href="{{ url('/articulos?categoria=Monitores') }}">Monitores</a>
-                    <a href="{{ url('/articulos?categoria=Teclados') }}">Teclados</a>
-                    <a href="{{ url('/articulos?categoria=Audifonos') }}">Audifonos</a>
-                    <a href="{{ url('/articulos') }}">Todos</a>
-                </div> 
-            </div> 
-            <div class="dropdown">
-                <button class="dropbtn">Filtros</button>
-                <div class="dropdown-content">
-                    <a href="{{ url('/articulos?menora=2000') }}">Menor a 2000 pesos</a>
-                    <a href="{{ url('/articulos?unicas=1') }}">Unicas piezas</a>
-                </div>
+<div class="cabecera">
+    <h1>Mi tiendita OP</h1> 
+    <img src="{{ asset('images/logo.jfif') }}" alt="Tienda de Electrónicos" class="logo">
+    <div class="dropdown-container">
+        <div class="dropdown">
+            <button class="dropbtn">Categorías</button>
+            <div class="dropdown-content">
+                <a href="{{ url('/articulos?categoria=GPU') }}">GPU</a>
+                <a href="{{ url('/articulos?categoria=Monitores') }}">Monitores</a>
+                <a href="{{ url('/articulos?categoria=Teclados') }}">Teclados</a>
+                <a href="{{ url('/articulos?categoria=Audifonos') }}">Audifonos</a>
+                <a href="{{ url('/articulos') }}">Todos</a>
             </div>
-            <div class="dropdown">
-                <button class="dropbtn">Ordenar por...</button>
-                <div class="dropdown-content">
-                    <a href="{{ url('/articulos?ordermayor_by=costo') }}">Precio mayor a menor</a>
-                    <a href="{{ url('/articulos?ordermenor_by=costo') }}">Precio menor a mayor</a>
-                    <a href="{{ url('/articulos?order_by=fecha_de_creacion') }}">Fecha de creacion</a>
-                </div>
+        </div> 
+        <div class="dropdown">
+            <button class="dropbtn">Filtros</button>
+            <div class="dropdown-content">
+                <a href="{{ url('/articulos?' . http_build_query(array_merge(request()->except(['menora', 'unicas']), ['menora' => 2000]))) }}">Menor a 2000 pesos</a>
+                <a href="{{ url('/articulos?' . http_build_query(array_merge(request()->except(['menora', 'unicas']), ['unicas' => 1]))) }}">Unicas piezas</a>
+                <a href="{{ url('/articulos?' . http_build_query(request()->except(['menora', 'unicas']))) }}">Borrar filtros</a>
             </div>
         </div>
+        <div class="dropdown">
+            <button class="dropbtn">Ordenar por...</button>
+            <div class="dropdown-content">
+                <a href="{{ url('/articulos?' . http_build_query(array_merge(request()->except(['ordermayor_by', 'ordermenor_by', 'order_by']), ['ordermayor_by' => 'costo']))) }}">Precio mayor a menor</a>
+                <a href="{{ url('/articulos?' . http_build_query(array_merge(request()->except(['ordermayor_by', 'ordermenor_by', 'order_by']), ['ordermenor_by' => 'costo']))) }}">Precio menor a mayor</a>
+                <a href="{{ url('/articulos?' . http_build_query(array_merge(request()->except(['ordermayor_by', 'ordermenor_by', 'order_by']), ['order_by' => 'fecha_de_creacion']))) }}">Fecha de creación</a>
+                <a href="{{ url('/articulos?' . http_build_query(request()->except(['ordermayor_by', 'ordermenor_by', 'order_by']))) }}">Borrar ordenamiento</a>
+            </div>
+        </div>
+        <div>
+            <a href="{{ url('/articulos') }}" class="button-resetall">Restablecer Todo</a>
+        </div>
     </div>
+</div>
 
     <div class="row">
             @foreach ($productos as $producto)
