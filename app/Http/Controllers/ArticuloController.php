@@ -13,10 +13,6 @@ class ArticuloController extends Controller
      */
     public function index(Request $request)
     {
-<<<<<<< Updated upstream
-        $products = Producto::all();
-        return view('articulos');
-=======
         $query = Producto::query();
 
         // Filtrar por categoría
@@ -29,7 +25,6 @@ class ArticuloController extends Controller
         $productos = $query->get();
         
         return view('articulos',compact('productos'));
->>>>>>> Stashed changes
     }
 
     /**

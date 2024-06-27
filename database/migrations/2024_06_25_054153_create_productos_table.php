@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('nombre');
             $table->string('categoria');
+            $table->string('marca');
             $table->date('fecha_de_creacion');
             $table->decimal('costo', 8, 2);
             $table->integer('numero_disponible');
