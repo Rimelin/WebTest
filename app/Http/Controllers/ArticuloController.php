@@ -11,10 +11,25 @@ class ArticuloController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(Request $request)
     {
+<<<<<<< Updated upstream
         $products = Producto::all();
         return view('articulos');
+=======
+        $query = Producto::query();
+
+        // Filtrar por categoría
+        if ($request->has('categoria')) {
+            $query->where('Categoria', $request->input('categoria'));
+        }
+
+        // ...otros filtros y ordenaciones...
+
+        $productos = $query->get();
+        
+        return view('articulos',compact('productos'));
+>>>>>>> Stashed changes
     }
 
     /**

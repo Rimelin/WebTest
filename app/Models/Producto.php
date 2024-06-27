@@ -18,4 +18,9 @@ class Producto extends Model
         'numero_disponible',
         'foto',
     ];
+    public function getFotoAttribute($value)
+{
+    return 'images/' . $value;
+}
+
 }
