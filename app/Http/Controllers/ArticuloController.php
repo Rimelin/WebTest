@@ -21,6 +21,23 @@ class ArticuloController extends Controller
         }
 
         // ...otros filtros y ordenaciones...
+        if ($request->has('menora')) {
+            $query->where('costo', '<=', $request->input('menora'));
+        }
+        if ($request->has('unicas')) {
+            $query->where('numero_disponible', '=', $request->input('unicas'));
+        }
+
+        if ($request->has('ordermayor_by')) {
+            $query->orderBy($request->input('ordermayor_by'), $request->input('order_direction', 'desc'));
+        }
+        if ($request->has('ordermenor_by')) {
+            $query->orderBy($request->input('ordermenor_by'), $request->input('order_direction', 'asc'));
+        }
+        
+        if ($request->has('order_by')) {
+            $query->orderBy($request->input('order_by'), $request->input('order_direction', 'asc'));
+        }
 
         $productos = $query->get();
         
