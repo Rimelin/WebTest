@@ -39,6 +39,13 @@ class ArticuloController extends Controller
             $query->orderBy($request->input('order_by'), $request->input('order_direction', 'asc'));
         }
 
+        //Filtrar por categoria + costo menor a 2000
+
+        if(($request->has('categoria')) && ($request->has('mejora')) ) {
+            $query->where('Categoria', $request->input('categoria'))
+                  ->where('costo', '<=', $request->input('menora'));
+        }
+
         $productos = $query->get();
         
         return view('articulos',compact('productos'));

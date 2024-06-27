@@ -79,6 +79,8 @@ main {
 
 .dropbtn {
     background-color: lemonchiffon;
+    border: 1px solid skyblue;
+    
 }
 
 .dropdown-container {
@@ -124,4 +126,27 @@ main {
 .card-body {
     flex-grow: 1; /* Hace que el cuerpo de la tarjeta ocupe el espacio disponible */
     padding: 15px; /* Añade espaciado interno al cuerpo de la tarjeta */
+}
+
+.button-resetall {
+    font-size: .8em;
+    background-color: lemonchiffon;
+    border: 1px solid skyblue; /* Cambié border-bottom a border */
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    margin-top: 2em;
+    border-radius: 8px;
+    padding-top: 3px;
+    padding-bottom: 3px; /* Añadí padding-bottom para equilibrar el padding */
+    padding-left: 10px;  /* Añadí padding-left para dar espacio lateral */
+    padding-right: 10px; /* Añadí padding-right para dar espacio lateral */
+    color: black; /* Añadí color para el texto */
+    display: inline-block; /* Añadí display para que el padding funcione correctamente */
+}
+
+.button-resetall:hover {
+    background-color: #367b39; /* Color de fondo más oscuro al pasar el ratón */
+    box-shadow: 0px 12px 24px 0px rgba(0,0,0,0.3); /* Sombra más grande */
+    color: black; /* Asegúrate de que el color del texto se mantenga blanco */
+    text-decoration: none; /* Asegúrate de que no haya subrayado */
 }
