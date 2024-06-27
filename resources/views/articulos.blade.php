@@ -27,17 +27,16 @@
             <div class="dropdown">
                 <button class="dropbtn">Filtros</button>
                 <div class="dropdown-content">
-                    <a href="#">Menor a 2000 pesos</a>
-                    <a href="#">Ofertas</a>
-                    <a href="#">Unicas piezas</a>
+                    <a href="{{ url('/articulos?menora=2000') }}">Menor a 2000 pesos</a>
+                    <a href="{{ url('/articulos?unicas=1') }}">Unicas piezas</a>
                 </div>
             </div>
             <div class="dropdown">
                 <button class="dropbtn">Ordenar por...</button>
                 <div class="dropdown-content">
-                    <a href="#">Precio mayor a menor</a>
-                    <a href="#">Precio menor a mayor</a>
-                    <a href="#">Fecha de creacion</a>
+                    <a href="{{ url('/articulos?ordermayor_by=costo') }}">Precio mayor a menor</a>
+                    <a href="{{ url('/articulos?ordermenor_by=costo') }}">Precio menor a mayor</a>
+                    <a href="{{ url('/articulos?order_by=fecha_de_creacion') }}">Fecha de creacion</a>
                 </div>
             </div>
         </div>
@@ -52,6 +51,7 @@
                             <p class="card-text">Marca: {{ $producto->marca }}</p>
                             <p class="card-text">Categoria: {{ $producto->categoria }}</p>
                             <p class="card-text">Precio: ${{ $producto->costo }}</p>
+                            <p class="card-text">Piezas disponibles: {{ $producto->numero_disponible }}</p>
                         </div>
                     </div>
                 </div>
