@@ -6,10 +6,10 @@ Este programa muestra los productos de manera dinamica contenidos en una base de
 
 ## Instalacion
 
-Instalar las dependencias (composer)
- composer install
-Clonar el repositorio
- git clone
+Instalar las dependencias (composer)<p>
+ composer install<p>
+Clonar el repositorio<p>
+ git clone<p>
 Configura las variables de entorno (.env)
 
 
@@ -17,21 +17,21 @@ Configura las variables de entorno (.env)
 
 Se debe hacer la migracion y el seed una vez instalado para visualizar sus datos de prueba <p>
 php artisan migrate<p>
-php artisan db:seed
+php artisan db:seed<p>
 php atisan serve
 
 ## Creditos
 
 Medina Barajas José Ricardo (https://github.com/rimelin)
 
-##Herramientas utilizadas:
--Laravel 
+## Herramientas utilizadas:
+-Laravel <p>
 -HTML/CSS + Bootstrap
 
 
 
 ## License
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).  <p>
 Este proyecto está bajo la Licencia MIT. Mira el archivo para más detalles.
 
