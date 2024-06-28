@@ -33,5 +33,5 @@ Medina Barajas José Ricardo (https://github.com/rimelin)
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).  <p>
-Este proyecto está bajo la Licencia MIT. Mira el archivo para más detalles.
+Este proyecto está bajo la Licencia MIT. Mira el archivo LICENSE en la carpeta raiz para más detalles.
 
