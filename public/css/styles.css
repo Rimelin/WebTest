@@ -150,3 +150,9 @@ main {
     color: black; /* Asegúrate de que el color del texto se mantenga blanco */
     text-decoration: none; /* Asegúrate de que no haya subrayado */
 }
+
+
+
+.formulario {
+    margin-top: 2em;
+}
