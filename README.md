@@ -15,8 +15,8 @@ Configura las variables de entorno (.env)
 
 ## Uso
 
-Se debe hacer la migracion y el seed una vez instalado para visualizar sus datos de prueba
-php artisan migrate
+Se debe hacer la migracion y el seed una vez instalado para visualizar sus datos de prueba <p>
+php artisan migrate<p>
 php artisan db:seed
 php atisan serve
 
