@@ -28,7 +28,9 @@ Medina Barajas José Ricardo (https://github.com/rimelin)
 -Laravel <p>
 -HTML/CSS + Bootstrap
 
+## Documentacion (Historias de usuario)
 
+https://drive.google.com/drive/folders/1ZfaEH9FgYsqzC9toREeS4HWFGkgtohZW?usp=sharing
 
 ## License
 
