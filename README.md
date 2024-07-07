@@ -2,8 +2,8 @@
 
 ## Descripcion
 
-Este programa muestra los productos de manera dinamica contenidos en una base de datos elaborada con ayuda de Eloquent, ademas de tener la posibilidad de incluir nuevos productos en una de sus vistas.
-/articulos ----> mostrar los productos recogidos de la BD
+Este programa muestra los productos de manera dinamica contenidos en una base de datos elaborada con ayuda de Eloquent, ademas de tener la posibilidad de incluir nuevos productos en una de sus vistas. <p>
+/articulos ----> mostrar los productos recogidos de la BD  <p>
 /productos ----> formulario para incluir un nuevo producto
 
 ## Instalacion
